@@ -1,0 +1,19 @@
+.main {
+  width: 100vw;
+  height: 90vh;
+  font-size: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  min-height: 10vh;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
