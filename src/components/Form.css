@@ -34,3 +34,14 @@ button {
         flex-direction: column;
     }
 }
+
+@media (max-width: 500px) {
+    label {
+        font-size: 1.5rem;
+    }
+
+    input,
+    button {
+        font-size: 1rem;
+    }
+}

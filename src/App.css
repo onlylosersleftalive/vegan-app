@@ -17,3 +17,13 @@
   justify-content: center;
   align-items: center;
 }
+
+@media (max-width: 500px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .footer p {
+    font-size: 1rem;
+  }
+}
