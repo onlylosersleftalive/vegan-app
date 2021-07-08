@@ -11,10 +11,7 @@ function Form(props) {
 
   let submitHandler = (event) => {
     event.preventDefault();
-    const enteredData = {
-      ingridient: userInput,
-    };
-    props.onSaveFormData(enteredData);
+    props.onSaveFormData(userInput);
     setUserInput("");
   };
 
