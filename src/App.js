@@ -11,19 +11,32 @@ function App() {
   });
   let saveFormDataHandler = (enteredFormData) => {
     setIngredientStatus(() => {
-      const checkedIngredient = isVegan.isVeganIngredient(enteredFormData);
-      console.log(checkedIngredient);
-      console.log(ingredientStatus);
-      return { checkedIngredient };
+      let arrOfIngredients = enteredFormData.split(" ");
+
+      const checkedIngredient =
+        arrOfIngredients.length > 1
+          ? isVegan.isVeganIngredientList(arrOfIngredients)
+          : isVegan.isVeganIngredient(enteredFormData);
+      const nonVeganIngredients =
+        isVegan.containsNonVeganIngredients(arrOfIngredients);
+
+      return { checkedIngredient, nonVeganIngredients };
     });
   };
-
+  console.log(ingredientStatus);
   return (
     <div>
       <div className="main">
         <h1 className="title">Check if your food ingridients are vegan</h1>
         <Form onSaveFormData={saveFormDataHandler} />
         {ingredientStatus.checkedIngredient === true ? <Vegan /> : <NotVegan />}
+        {ingredientStatus.checkedIngredient === false &&
+          ingredientStatus.nonVeganIngredients !== undefined && (
+            <p>
+              The non-vegan ingredient(s) from your list:
+              {ingredientStatus.nonVeganIngredients.join(" ")}
+            </p>
+          )}
       </div>
       <div className="footer">
         <p>Made by Sveta M.</p>
