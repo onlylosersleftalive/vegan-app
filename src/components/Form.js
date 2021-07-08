@@ -17,7 +17,7 @@ function Form(props) {
 
   return (
     <form onSubmit={submitHandler}>
-      <label>Add one or more ingridients:</label>
+      <label>Add one or more ingredients:</label>
       <input type="text" onChange={inputChangeHandler} value={userInput} />
       <button type="submit">Submit</button>
     </form>
