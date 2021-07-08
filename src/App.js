@@ -39,7 +39,9 @@ function App() {
           )}
       </div>
       <div className="footer">
-        <p>Made by Sveta M.</p>
+        <p>
+          Made by <a href="https://github.com/onlylosersleftalive">Sveta M.</a>
+        </p>
       </div>
     </div>
   );

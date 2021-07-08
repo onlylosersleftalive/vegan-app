@@ -18,6 +18,14 @@
   align-items: center;
 }
 
+.footer a {
+  color: white;
+}
+
+.footer a:hover {
+  color: rgb(8, 133, 133);
+}
+
 @media (max-width: 500px) {
   .title {
     font-size: 2rem;
